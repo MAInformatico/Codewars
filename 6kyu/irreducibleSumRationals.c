@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-long long mcm(long long a, long long b){
+long long gcd(long long a, long long b){ //Euclides algorithm
   long long common = b;
   while(a%b!=0){
     common = a%b;
@@ -19,7 +19,7 @@ int* sumFracts(int lst[][2], int row) {
     long long sumNumerators = 0;
     for(int i = 0; i<row;i++) sumDenominators*=lst[i][1];
     for(int i = 0; i<row;i++) sumNumerators+=sumDenominators*lst[i][0]/lst[i][1];
-    long long commonDenominator = mcm(sumNumerators,sumDenominators);
+    long long commonDenominator = gcd(sumNumerators,sumDenominators);
     result[0] =sumNumerators/commonDenominator;
     result[1] =sumDenominators/commonDenominator;
     return result;
