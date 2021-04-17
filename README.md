@@ -1,2 +1,2 @@
 # Codewars
-https://www.codewars.com/users/MAInformatico/badges/small
+![codewars badge](https://www.codewars.com/users/MAInformatico/badges/small)
